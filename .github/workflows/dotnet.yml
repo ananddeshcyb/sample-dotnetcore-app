@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: Ananddesh
+    runs-on: Ananddesh-Win10
 
     steps:
     - uses: actions/checkout@v2
