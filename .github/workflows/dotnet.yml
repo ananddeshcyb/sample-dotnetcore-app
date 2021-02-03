@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 env:
   AZURE_WEBAPP_NAME: almnetcore    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '/home/runner/work/sample-dotnetcore-app/sample-dotnetcore-app/samplecoreapp/'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '2.2.402'           # set this to the dot net version to use
+  AZURE_WEBAPP_PACKAGE_PATH: '/home/runner/work/sample-dotnetcore-app/sample-dotnetcore-app/samplecoreapp/' # set this to the path to your web app project, defaults to the repository root
+  #DOTNET_VERSION: '2.2.402'           # set this to the dot net version to use
   
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
         # Artifact name
         name: BuildArtifactDrop
         # A file, directory or wildcard pattern that describes what to upload
-        path: /home/runner/work/sample-dotnetcore-app/sample-dotnetcore-app/samplecoreapp/bin/Debug
+        path: '{{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp/'
     - name: Azure Login
       uses: Azure/login@v1
       with:
