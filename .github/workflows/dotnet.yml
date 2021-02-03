@@ -50,4 +50,5 @@ jobs:
         # Applies to Web Apps(Windows and Linux) and Web App Containers(linux). Multi container scenario not supported. Publish profile (*.publishsettings) file contents with Web Deploy secrets
         # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
         #package: '{{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp/'
-        package: '{{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
+        #package: '{{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
+        package: '/home/runner/work/sample-dotnetcore-app/sample-dotnetcore-app/samplecoreapp/myapp'
