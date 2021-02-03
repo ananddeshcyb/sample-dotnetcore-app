@@ -30,3 +30,8 @@ jobs:
         name: BuildArtifactDrop
         # A file, directory or wildcard pattern that describes what to upload
         path: /home/runner/work/sample-dotnetcore-app/sample-dotnetcore-app/samplecoreapp/bin/Debug
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
