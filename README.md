@@ -1,0 +1,3 @@
+# sample-dotnetcore-app
+
+adsdsad
